@@ -7,7 +7,6 @@ let d = new Date(2021, 0, 24, 22, 51);
 ```
 ### 2. Для чего предназначен метод `getDay()`?
 Вернет день недели от 0 (воскресенье) до 6 (суббота).
-
 ### 3. Как посчитать, сколько секунд осталось до завтра?
 ```
 function getSecondsToTomorrow() {
@@ -20,40 +19,33 @@ function getSecondsToTomorrow() {
 ### 4. Для чего предназначен метод `getDate()`?
 Получить день месяца, от 1 до 31
 ### 5. Что выведет `console.log(d)` ?
-    
-    ```jsx
-    let d = new Date(2016, 2, 9);
-    
-    console.log(d);
-    ```
+```
+let d = new Date(2016, 2, 9);  
+console.log(d);
+```
 Ответ:
 ```
 Wed Mar 09 2016 00:00:00 GMT+0300 (Москва, стандартное время)
 ```
-    
 ### 6. Что делает `getTimezoneOffset()` ?
 Возвращает разницу в минутах между UTC и местным часовым поясом.
 ### 7. Что выведет консоль?
-    
-    ```jsx
-    let date = new Date();
-    
-    console.log(date.getUTCHours());
-    ```
+```
+let date = new Date();
+console.log(date.getUTCHours());
+```
 Ответ (в 12:24 по Московскому времени UTC+3): 
 ```
 9
-```
-    
+``` 
 ### 8. Для чего предназначен метод `getHours()` объекта Date?
 Метод getHours() возвращает часы указанной даты по местному времени.
 ### 9. Что выведет консоль?
-    
-    ```jsx
-    let d = new Date(); 
-    let y =  d.getFullYear();
-    console.log(y);
-    ```
+```
+let d = new Date(); 
+let y =  d.getFullYear();
+console.log(y);
+```
 Ответ: 
 ```
 2023
