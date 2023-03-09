@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Сервис комментариев</title>
+    <link href="./src/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <body>
+        <h1>Сервис комментариев со спам фильтром</h1>
+        <main>
+        <section>
+            <h2>Оставьте ваш комментарий</h2>
+            <form>
+                <div class="text-field">
+                    <label class="text-field__label" for="name">Введите ваше ФИО:</label>
+                    <input class="text-field__input1" type="text" name="name" id="name" required placeholder="ФИО">
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="avatar">Введите ссылку на ваш аватар:</label>
+                    <input class="text-field__input2" type="url" name="avatar" id="avatar" required placeholder="Ссылка">
+                </div>
+                <div class="comment-box">
+                    <label class="comment-box__label" for="comment">
+                        Оставьте комментарий:
+                        <textarea cols="50" rows="10" class="comment-box__textarea" name="comment" id="comment" required placeholder="Комментарий"></textarea>
+                    </label>
+                </div>
+                <div>
+                    <button type="button" id="button" onclick="getComment();">Отправить</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2>Чат</h2>
+            <div class="box">
+                <p id="item-1"></p>
+                <img id="item-3">
+                <p id="item-2"></p>
+            </div>
+        </section>
+        </main>
     <script src="./src/index.js"></script>
+    <script src="./src/formatDate.js"></script>
 </body>
 </html>
