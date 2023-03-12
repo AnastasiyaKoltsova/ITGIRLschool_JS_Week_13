@@ -13,14 +13,25 @@
         <main>
         <section>
             <h2>Оставьте ваш комментарий</h2>
+            <form class="checkbox">
+                <legend>Показывать ваше имя?</legend>
+                    <div>
+                        <input type="radio" class="custom-checkbox checkbox-yes" name="showName" checked>
+                        <label for="yes">Yes</label>
+        
+                        <input type="radio" class="custom-checkbox checkbox-no" name="showName">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+            </form>
             <form>
                 <div class="text-field">
                     <label class="text-field__label" for="name">Введите ваше ФИО:</label>
-                    <input class="text-field__input1" type="text" name="name" id="name" required placeholder="ФИО">
+                    <input class="text-field__input1" type="text" name="name" id="name" placeholder="ФИО" required>
                 </div>
                 <div class="text-field">
                     <label class="text-field__label" for="avatar">Введите ссылку на ваш аватар:</label>
-                    <input class="text-field__input2" type="url" name="avatar" id="avatar" required placeholder="Ссылка">
+                    <input class="text-field__input2" type="url" name="avatar" id="avatar" placeholder="Ссылка">
                 </div>
                 <div class="comment-box">
                     <label class="comment-box__label" for="comment">
@@ -36,8 +47,16 @@
         <section>
             <h2>Чат</h2>
             <div class="box">
-                <p id="item-1"></p>
-                <img id="item-3">
+                <div class="box-container">
+                    <div class="container">
+                        <img id="item-3">
+                        <p id="item-1"></p>
+                    </div>
+                    <div class="container-time">
+                        <p class="time"></p>
+                        <p></p>
+                    </div>
+                </div>
                 <p id="item-2"></p>
             </div>
         </section>

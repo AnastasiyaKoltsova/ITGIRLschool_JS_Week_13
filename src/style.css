@@ -78,5 +78,40 @@ button:hover {
 }
 
 img {
-    width: 20vw;
+    width: 5vw;
+}
+
+.container {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.container p {
+    color: #3c3cb7;
+    font-weight: 700;
+}
+
+.box {
+    border-bottom: 3px #3c3cb7 dotted;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 10vw;
+    gap: 20vw;
+}
+
+.container-time p {
+    color: #3c3cb7;
+}
+
+.checkbox {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 1rem;
+}
+
+.custom-checkbox {
+    border: 1px #3c3cb7 solid;
 }
