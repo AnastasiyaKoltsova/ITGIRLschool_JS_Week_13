@@ -1,6 +1,6 @@
-const input1 = document.querySelector('.text-field__input1');
+const commentName = document.querySelector('.text-field__input1');
 const paragraph1 = document.querySelector('#item-1');
-const input2 = document.querySelector('.comment-box__textarea');
+const commentBody = document.querySelector('.comment-box__textarea');
 const paragraph2 = document.querySelector('#item-2');
 const url = document.querySelector('.text-field__input2');
 const paragraph3 = document.querySelector('#item-3');
@@ -12,7 +12,7 @@ function checkSpam(str) {
 }
 
 function checkNameIfYes() {
-    paragraph1.textContent = input1.value
+    paragraph1.textContent = commentName.value
         .trim()
         .toLowerCase()
         .replace(/(^|\s)\S/g, (chr) => chr.toUpperCase());
@@ -23,12 +23,12 @@ function checkNameIfNo() {
 }
 
 function displayTime() {
-    paragraphDate.innerHTML = Date();
+    paragraphDate.innerHTML = timeConverter(Math.floor(Date.now() / 1000));
 }
 
 function avatar(url) {
     if (url.value.length === 0) {
-        let avatarArray = ["./src/images/avatar1.jpeg", "./src/images/avatar2.jpeg", "./src/images/avatar3.jpeg", "./src/images/avatar4.jpeg", "./src/images/avatar5.jpeg"];
+        let avatarArray = ["./src/images/avatar1.png", "./src/images/avatar2.png", "./src/images/avatar3.png", "./src/images/avatar4.png", "./src/images/avatar5.png"];
         let randomAvatar = avatarArray[Math.floor(Math.random() * avatarArray.length)];
         paragraph3.setAttribute('src', randomAvatar);
     } else {
@@ -43,6 +43,19 @@ function getComment(){
         checkNameIfNo();
     }
     avatar(url);
-    paragraph2.textContent = checkSpam(input2.value);
+    paragraph2.textContent = checkSpam(commentBody.value);
     displayTime();
+}
+
+function timeConverter(UNIX_timestamp){
+    const a = new Date(UNIX_timestamp * 1000);
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const year = a.getFullYear();
+    const month = months[a.getMonth()];
+    const date = a.getDate();
+    const hour = a.getHours();
+    const min = a.getMinutes();
+    const sec = a.getSeconds();
+    const time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    return time;
 }
