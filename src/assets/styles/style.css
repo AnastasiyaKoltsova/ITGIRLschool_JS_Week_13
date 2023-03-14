@@ -18,6 +18,12 @@ h2 {
     color: #3c3cb7;
 }
 
+.checkbox {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 1rem;
+}
+
 .text-field, .comment-box {
     margin-bottom: 1rem;
 }
@@ -71,47 +77,36 @@ textarea {
     font-weight: 400;
     line-height: 1.5;
     border-radius: 0.25rem;
+    cursor: pointer;
 }
 
 button:hover {
     border: #fff;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 5vw 5vw 1fr;
+    gap: 2vw;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.container p {
+    font-weight: 700;
+}
+
+.post-item {
+    border-bottom: 3px #3c3cb7 dotted;
+    padding: 2vh 0;
+}
+
 img {
     width: 5vw;
 }
 
-.container {
-    display: flex;
-    gap: 2vw;
-    align-items: center;
-}
-
-.container p {
+.post-item--date {
     color: #3c3cb7;
-    font-weight: 700;
+    justify-self: end;
 }
 
-.box {
-    border-bottom: 3px #3c3cb7 dotted;
-}
-
-.box-container {
-    display: grid;
-    grid-template-columns: 1fr 10vw;
-    gap: 20vw;
-}
-
-.container-time p {
-    color: #3c3cb7;
-}
-
-.checkbox {
-    display: flex;
-    gap: 2vw;
-    margin-bottom: 1rem;
-}
-
-.custom-checkbox {
-    border: 1px #3c3cb7 solid;
-}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сервис комментариев</title>
-    <link href="./src/style.css" rel="stylesheet" type="text/css">
+    <link href="./src/assets/styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <body>
@@ -16,15 +16,15 @@
             <form class="checkbox">
                 <legend>Показывать ваше имя?</legend>
                     <div>
-                        <input type="radio" class="custom-checkbox checkbox-yes" name="showName" checked>
+                        <input type="radio" class="checkbox-yes" name="showName" checked>
                         <label for="yes">Yes</label>
         
-                        <input type="radio" class="custom-checkbox checkbox-no" name="showName">
+                        <input type="radio" class="checkbox-no" name="showName">
                         <label for="no">No</label>
                     </div>
                 </div>
             </form>
-            <form>
+            <form class="main-form">
                 <div class="text-field">
                     <label class="text-field__label" for="name">Введите ваше ФИО:</label>
                     <input class="text-field__input1" type="text" name="name" id="name" placeholder="ФИО" required>
@@ -46,21 +46,10 @@
         </section>
         <section>
             <h2>Чат</h2>
-            <div class="box">
-                <div class="box-container">
-                    <div class="container">
-                        <img id="item-3">
-                        <p id="item-1"></p>
-                    </div>
-                    <div class="container-time">
-                        <p class="time"></p>
-                    </div>
-                </div>
-                <p id="item-2"></p>
-            </div>
+            <div class="wrapper"></div>
         </section>
         </main>
-    <script src="./src/index.js"></script>
-    <script src="./src/formatDate.js"></script>
+    <script src="./src/assets/scripts/index.js"></script>
+    <script src="./src/assets/scripts/formatDate.js"></script>
 </body>
 </html>
